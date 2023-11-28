@@ -1,0 +1,91 @@
+* {
+    /*  box-sizing: border-box; */
+    /* margin: 0;
+    padding: 0; */
+}
+
+html {
+    font-size: 62.5%; 
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+body {
+    font-family: 'Raleway', sans-serif;
+}
+
+/* Estilos Globales */
+h1, h2, h3 {
+    font-family: 'Playfair Display', serif;
+}
+a {
+    text-decoration: none;
+    color: black;
+}
+
+.contenedor {
+    max-width: 120rem;
+    margin: 0 auto 0 auto;
+    /*margin-inline: auto; /*esto es lo mismo que la linea de arriba*/
+
+}
+img{
+    max-width: 120rem;
+    display: block;
+}
+
+/* header y navegacion */
+.nombre-sitio {
+    margin: 5rem;
+    margin-bottom: 5rem;
+    text-align: center;
+    font-size: 5.5rem;
+}
+
+.nombre-sitio span {
+    color: #037bc0;
+}
+.contenedor-navegacion {
+    border-top: 0.1rem solid #e1e1e1;
+    font-size: 2.3rem;
+}
+
+.nav-principal {
+    display: flex;
+    padding: 2rem 0;
+    justify-content: space-between;
+}
+
+.hero {
+    background-image: url(../img/principal.jpg);
+    background-repeat: no-repeat;
+    /*esto hace que la imagen no se repita */
+    background-size: cover;
+    /* esto hace que se estire la imagen */
+    height: 40rem;
+}
+/*Listado de categorias*/
+.categorias h2 {
+    text-align: center;
+}
+.categoria a {
+    text-align: center;
+    display: block;
+    padding: 2rem;
+    font-size: 2rem;
+}
+.categoria a:hover {
+    background-color: #037bc0;
+    color: white;
+    border-bottom-right-radius: 1rem;
+}
+.listado-categorias {
+
+    display: grid;
+    grid-template-columns: repeat(3,1fr);/* 4 columnas de 200px*/
+    gap: 2rem; /* separacion de los elementos */
+}
