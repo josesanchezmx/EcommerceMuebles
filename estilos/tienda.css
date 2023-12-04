@@ -1,0 +1,236 @@
+* {
+    box-sizing: border-box; 
+   margin: 0;
+   padding: 0; 
+}
+
+html {
+   font-size: 62.5%; 
+   box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+   box-sizing: inherit;
+}
+body {
+   font-family: 'Raleway', sans-serif;
+   font-size: 1.6rem;
+   line-height: 2;
+/*     background: linear-gradient(to bottom,#f0f0f0, #92c5eb);
+*/    background: linear-gradient(to bottom,#f0f0f0, #92c5eb);
+
+}
+
+/* Estilos Globales */
+h1, h2, h3 {
+   font-family: 'Playfair Display', serif;
+   margin: 0 0 5rem 0;
+}
+h1 {
+   font-size: 5rem;
+}
+h2 {
+   font-size: 3rem;
+}
+h3{
+   font-size: 3rem;
+}
+a {
+   text-decoration: none;
+   color: black;
+}
+
+.contenedor {
+   max-width: 120rem;
+   margin: 0 auto 0 auto;
+   /*margin-inline: auto; /*esto es lo mismo que la linea de arriba*/
+
+}
+img{
+   max-width: 100%;
+   display: block;
+}
+.btn {
+   background-color: #8cbc00;
+   display: block;
+   color: black;
+   text-transform: uppercase;
+   font-weight: 900;
+   padding: 1rem;
+   transition: background-color .3s ease-out;
+   text-align: center;
+   border: none;
+}
+.btn:hover {
+   background-color: #769c02;
+   cursor: pointer;
+}
+/*utilidades*/
+.text-center {
+   text-align: center;
+}
+.max-width-30 {
+   max-width: 30rem;
+}
+
+/* header y navegacion */
+.nombre-sitio {
+   margin: 5rem;
+   margin-bottom: 5rem;
+   text-align: center;
+}
+
+.nombre-sitio span {
+   color: #037bc0;
+}
+.contenedor-navegacion {
+   border-top: 0.2rem solid #afafaf;
+   font-size: 2.3rem;
+    transition: color 0.3s ease;
+}
+
+
+
+.contenedor-navegacion a {
+   display: inline-block;
+   text-decoration: none; /* Quita el subrayado predeterminado de los enlaces */
+   /*color: #333; /* Color de texto regular */
+   /*font-size: 16px; /* Tamaño de fuente regular */
+   /*font-weight: 500; /* Grosor de fuente regular */
+   padding: 8px 16px; /* Espaciado interno */
+   border-radius: 4px; /* Esquinas redondeadas */
+   transition: color 0.3s ease, background-color 0.3s ease; /* Transiciones suaves */
+
+   /* Otros estilos que desees aplicar a los enlaces */
+}
+
+.contenedor-navegacion a:hover {
+   color: #fff; /* Cambia el color del texto al hacer hover */
+   background-color: #037bc0; /* Cambia el color de fondo al hacer hover */
+   /* Otros estilos adicionales que quieras añadir al hacer hover */
+}
+
+
+.nav-principal {
+   display: flex;
+   padding: 2rem 0;
+   justify-content: space-between;
+}
+
+
+/*listado de productos*/
+.contenido-pricipal {
+   padding-top: 5rem;
+   margin-bottom: 2rem ;
+}
+.listado-productos {
+   display: grid;
+   grid-template-columns: repeat(6, 1fr);/*colocamos los productos en 6 columnas  de 1fraccion*/  
+   column-gap:  2rem;/*separacion entre columnas*/
+   row-gap: 2rem;
+}
+.producto:nth-child(1){
+   grid-column-start: 1;
+   grid-column-end: 7;
+   display: grid;
+   grid-template-columns: 3fr 1fr;  
+}
+.producto:nth-child(1) img {
+   height: 45rem;
+   width: 100%;
+   object-fit:cover;
+}
+.producto:nth-child(2){
+   grid-column-start: 1;
+   grid-column-end: 4;
+}
+.producto:nth-child(2) img,
+.producto:nth-child(3) img {
+   height: 25rem;
+   width: 100%;
+   object-fit: cover;
+}
+.producto:nth-child(3){
+   grid-column-start: 4;
+   grid-column-end: 7;
+}
+.producto:nth-child(4){
+   grid-column-start: 1;
+   grid-column-end: 3;
+}
+.producto:nth-child(5) {
+   grid-column-start: 3;
+   grid-column-end: 5;
+}
+.producto:nth-child(6) {
+   grid-column-start: 5;
+   grid-column-end: 7;
+}
+.producto {
+   background-color: #037bc0;
+}
+.texto-producto {
+   text-align: center;
+   color: white;
+   padding: 2rem;
+}
+.texto-producto h3{
+   margin: 0; 
+}
+.texto-producto p {
+   margin:  0 0 .5rem 0;
+}
+.texto-producto p .precio {
+   font-size: 2.8rem;
+   font-weight: 900;
+}
+
+/* .producto img {
+   transition: transform .3s ease-out;
+}
+.producto:hover img {
+   transform: scale(.8);
+} */
+
+/* footer */
+.site-footer h3 {
+   margin-bottom: .5rem;
+   color:#334; 
+}
+.site-footer {
+   border-top: 0.2rem solid #afafaf;
+   margin: 2rem 0 0 0;
+   padding: .3rem;
+   width: 100%;
+/*     background: linear-gradient(to bottom, #92c5eb,#f0f0f0);
+*/}
+.grid-footer {
+   display: grid;
+   grid-template-columns: repeat(4, 1fr);
+   gap: 2rem;
+}
+.footer-menu a {  
+   display: block;
+   font-family: 'Raleway', sans-serif;
+   margin: .5rem .5rem;
+   color: #333;
+   transition: color 0.3s ease;
+}
+.footer-menu a:hover {
+   color: #037bc0;
+}
+.copyright {
+   display: gr;
+   text-align: center; 
+   font-weight: bold;
+   margin-top: 1rem; 
+   padding: 2rem; /* Ajusta el padding para aumentar el tamaño vertical */
+/*     background: linear-gradient(to bottom, #92c5eb, #f0f0f0);*/    
+   width: 100%; 
+   background-color: #92c5eb;
+}
+
+
+
