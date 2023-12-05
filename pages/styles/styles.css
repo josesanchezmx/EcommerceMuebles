@@ -120,7 +120,7 @@ img{
 }
 
 .hero {
-    background-image: url(../img/principal.jpg);
+    background-image: url(../../img/principal.jpg);
     background-repeat: no-repeat;
     /*esto hace que la imagen no se repita */
     background-size: cover;
