@@ -31,11 +31,26 @@ h1, h2, h3 {
 h1 {
    font-size: 5rem;
 }
+@media (min-width: 768px) {
+   h1 {
+       font-size: 4rem;
+   } 
+}
 h2 {
-   font-size: 3rem;
+   font-size: 3.2rem;
+}
+@media (min-width:768px) {
+   h2 {
+       font-size: 4rem;
+   }
 }
 h3{
-   font-size: 3rem;
+   font-size: 2.4rem;
+}
+@media (min-width: 768px) {
+   h3 {
+     font-size: 4rem;  
+   }
 }
 a {
    text-decoration: none;
@@ -90,9 +105,6 @@ img{
    font-size: 2.3rem;
     transition: color 0.3s ease;
 }
-
-
-
 .contenedor-navegacion a {
    display: inline-block;
    text-decoration: none; /* Quita el subrayado predeterminado de los enlaces */
@@ -105,22 +117,46 @@ img{
 
    /* Otros estilos que desees aplicar a los enlaces */
 }
-
 .contenedor-navegacion a:hover {
    color: #fff; /* Cambia el color del texto al hacer hover */
    background-color: #037bc0; /* Cambia el color de fondo al hacer hover */
    /* Otros estilos adicionales que quieras añadir al hacer hover */
 }
+.nav-principal {
+   display: flex;
+   padding: 2rem 0;
+   flex-direction: column;
+   align-items: center;
+}
+@media (min-width: 768px) {
+   .nav-principal {
+       justify-content: space-between;
+       flex-direction: row;
 
+   }
+}
+.contenedor-navegacion a {
+   display: inline-block;
+   text-decoration: none; /* Quita el subrayado predeterminado de los enlaces */
+   /*color: #333; /* Color de texto regular */
+   /*font-size: 16px; /* Tamaño de fuente regular */
+   /*font-weight: 500; /* Grosor de fuente regular */
+   padding: 8px 16px; /* Espaciado interno */
+   border-radius: 4px; /* Esquinas redondeadas */
+   transition: color 0.3s ease, background-color 0.3s ease; /* Transiciones suaves */
 
+   /* Otros estilos que desees aplicar a los enlaces */
+}
+.contenedor-navegacion a:hover {
+   color: #fff; /* Cambia el color del texto al hacer hover */
+   background-color: #037bc0; /* Cambia el color de fondo al hacer hover */
+   /* Otros estilos adicionales que quieras añadir al hacer hover */
+}
 .nav-principal {
    display: flex;
    padding: 2rem 0;
    justify-content: space-between;
 }
-
-
-
 /*Bloque sobre nosotros*/
 .sobre-nosotros {
    /*background-image: linear-gradient(to right,#000000 50%,red 50%, red 100%);*/
@@ -153,28 +189,48 @@ img{
 } */
 
 /* footer */
-.site-footer h3 {
-   margin-bottom: .5rem;
-   color:#334; 
-}
 .site-footer {
    border-top: 0.2rem solid #afafaf;
    margin: 2rem 0 0 0;
    padding: .3rem;
    width: 100%;
-/*     background: linear-gradient(to bottom, #92c5eb,#f0f0f0);
-*/}
-.grid-footer {
-   display: grid;
-   grid-template-columns: repeat(4, 1fr);
-   gap: 2rem;
+   /*background: linear-gradient(to bottom, #92c5eb,#f0f0f0);*/
+}
+.site-footer h3 {
+   margin-bottom: .5rem;
+   color:#334; 
+   text-align: center;
+}
+@media (min-width: 768px) {
+   .site-footer h3{
+       text-align: left;
+   }
+   .grid-footer {
+       display: grid;
+       grid-template-columns: repeat(4, 1fr);
+       gap: 2rem;
+   }
+}
+.grid-footer > div {
+   margin-bottom: 2rem;
+}
+@media (min-width: 768px) {
+   .grid-footer > div {
+       margin: 0;
+   }
 }
 .footer-menu a {  
    display: block;
    font-family: 'Raleway', sans-serif;
+   text-align: center;
    margin: .5rem .5rem;
    color: #333;
    transition: color 0.3s ease;
+}
+@media (min-width: 768px) {
+   .footer-menu a {
+       text-align: left;
+   }
 }
 .footer-menu a:hover {
    color: #037bc0;
@@ -202,6 +258,12 @@ img{
    display: flex;
    flex-direction: column;
    justify-content: center;
+   padding: 5rem;
+}
+@media (min-width: 768px) {
+   .informacion-nosotros {
+      padding: 0;
+   }
 }
 
 

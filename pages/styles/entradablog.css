@@ -66,8 +66,10 @@ img{
 .text-center {
    text-align: center;
 }
-.max-width-30 {
-   max-width: 30rem;
+@media (min-width: 768px) {
+   .max-width-30 {
+      max-width: 30rem;
+   }
 }
 /* header y navegacion */
 .nombre-sitio {
@@ -75,6 +77,7 @@ img{
    margin-bottom: 5rem;
    text-align: center;
 }
+
 .nombre-sitio span {
    color: #037bc0;
 }
@@ -83,6 +86,9 @@ img{
    font-size: 2.3rem;
     transition: color 0.3s ease;
 }
+
+
+
 .contenedor-navegacion a {
    display: inline-block;
    text-decoration: none; /* Quita el subrayado predeterminado de los enlaces */
@@ -92,8 +98,10 @@ img{
    padding: 8px 16px; /* Espaciado interno */
    border-radius: 4px; /* Esquinas redondeadas */
    transition: color 0.3s ease, background-color 0.3s ease; /* Transiciones suaves */
+
    /* Otros estilos que desees aplicar a los enlaces */
 }
+
 .contenedor-navegacion a:hover {
    color: #fff; /* Cambia el color del texto al hacer hover */
    background-color: #037bc0; /* Cambia el color de fondo al hacer hover */
@@ -102,40 +110,59 @@ img{
 .nav-principal {
    display: flex;
    padding: 2rem 0;
-   justify-content: space-between;
+   flex-direction: column;
+   align-items: center;
 }
-.hero {
-   background-image: url(../img/principal.jpg);
-   background-repeat: no-repeat;
-   /*esto hace que la imagen no se repita */
-   background-size: cover;
-   /* esto hace que se estire la imagen */
-   background-position:  center center;
-   height: 55rem;
+@media (min-width: 768px) {
+   .nav-principal {
+       justify-content: space-between;
+       flex-direction: row;
+
+   }
 }
 /* footer */
-.site-footer h3 {
-   margin-bottom: .5rem;
-   color:#334; 
-}
 .site-footer {
    border-top: 0.2rem solid #afafaf;
    margin: 2rem 0 0 0;
    padding: .3rem;
    width: 100%;
-/*     background: linear-gradient(to bottom, #92c5eb,#f0f0f0);
-*/}
-.grid-footer {
-   display: grid;
-   grid-template-columns: repeat(4, 1fr);
-   gap: 2rem;
+   /*background: linear-gradient(to bottom, #92c5eb,#f0f0f0);*/
+}
+.site-footer h3 {
+   margin-bottom: .5rem;
+   color:#334; 
+   text-align: center;
+}
+@media (min-width: 768px) {
+   .site-footer h3{
+       text-align: left;
+   }
+   .grid-footer {
+       display: grid;
+       grid-template-columns: repeat(4, 1fr);
+       gap: 2rem;
+   }
+}
+.grid-footer > div {
+   margin-bottom: 2rem;
+}
+@media (min-width: 768px) {
+   .grid-footer > div {
+       margin: 0;
+   }
 }
 .footer-menu a {  
    display: block;
    font-family: 'Raleway', sans-serif;
+   text-align: center;
    margin: .5rem .5rem;
    color: #333;
    transition: color 0.3s ease;
+}
+@media (min-width: 768px) {
+   .footer-menu a {
+       text-align: left;
+   }
 }
 .footer-menu a:hover {
    color: #037bc0;
@@ -151,24 +178,40 @@ img{
    background-color: #92c5eb;
 }
 /*Blog*/
-.contenedor-blog {
-   display: grid;
-   grid-template-columns: 2fr 1fr;
-   column-gap: 4rem;
+/*Blog*/
+@media (min-width: 768px) {
+   .contenedor-blog {
+      display: grid;
+      grid-template-columns: 2fr 1fr;
+      column-gap: 4rem;
+   }  
 }
 .entrada {
    border-bottom: .2rem solid #696868;
    padding-bottom: 4rem;
    margin-bottom: 2rem;
 }
+.entrada h2 {
+   text-align: center;
+}
+@media (min-width: 768px) {
+   .entrada h2 {
+      text-align: left;
+   }
+}
+.contenido-blog {
+   padding: 2rem;
+}
 .entrada:last-of-type {
    border: none;
 }
-.entrada-meta {
+@media (min-width: 768px) {
+   .entrada-meta {
    display: flex;
    justify-content: space-between;
-
 }
+}
+
 .entrada-meta p{
    font-weight: bold;
    
@@ -183,4 +226,9 @@ img{
 .contenido-entrada-blog {
   width: 60rem;
   margin: 0 auto; 
+}
+@media (min-width: 768px) {
+   .otras-entradas {
+      padding: 4rem;
+   }
 }
